@@ -35,7 +35,8 @@
 
 					<v-col>
 						<v-textarea
-							:rules="emailRules"
+							v-model="text"
+							:rules="textRules"
 							:counter="1490"
 							auto-grow="true"
 							name="input-7-1"
@@ -54,22 +55,12 @@
 </template>
 
 <script>
+import axios from "axios";
+
+const url = "http://localhost:8000/write";
+
 export default {
 	data: () => ({
-		// valid: true,
-		// name: "",
-		// nameRules: [
-		// 	(v) => !!v || "Name is required",
-		// 	(v) => (v && v.length <= 10) || "Name must be less than 10 characters",
-		// ],
-		// email: "",
-		// emailRules: [
-		// 	(v) => !!v || "E-mail is required",
-		// 	(v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
-		// ],
-		// select: null,
-		// items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-		// checkbox: false,
 		valid: false,
 		firstname: "",
 		lastname: "",
@@ -82,7 +73,7 @@ export default {
 			(v) => !!v || "Name is required",
 			(v) => v.length <= 100 || "제목은 100자 이하여야 합니다.",
 		],
-		emailRules: [
+		textRules: [
 			(v) => !!v || "E-mail is required",
 			(v) => v.length <= 1490 || "내용은 1490자 이하여야합니다. ",
 		],
@@ -91,6 +82,22 @@ export default {
 	methods: {
 		validate() {
 			this.$refs.form.validate();
+
+			let data = new FormData();
+			data.append("name", this.name);
+			data.append("title", this.title);
+			data.append("text", this.text);
+
+			console.log(data);
+
+			axios
+				.post(url, data)
+				.then(function (response) {
+					console.log(response);
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
 		},
 	},
 };
