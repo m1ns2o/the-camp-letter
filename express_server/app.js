@@ -9,7 +9,6 @@ const app = express();
 
 // Static File Service
 app.use(express.static("public"));
-// Body-parser
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -24,8 +23,8 @@ mongoose
 	.catch((e) => console.error(e));
 
 // ROUTERS
-app.use("/", require("./routes/todos"));
+app.use("/", require("./routes/crud"));
 
 app.listen(8000, () => {
-	console.log('run server')
+	console.log("run server");
 });
