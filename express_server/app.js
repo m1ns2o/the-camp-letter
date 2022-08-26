@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 const app = express();
-const port = process.env.PORT || 4500;
 
 // Static File Service
 app.use(express.static("public"));
@@ -27,4 +26,6 @@ mongoose
 // ROUTERS
 app.use("/", require("./routes/todos"));
 
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.listen(8000, () => {
+	console.log('run server')
+});
