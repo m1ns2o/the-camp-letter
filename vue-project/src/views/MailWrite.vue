@@ -57,7 +57,7 @@
 <script>
 import axios from "axios";
 
-const url = "http://localhost:8000/write";
+const url = "http://localhost:8000/";
 // const url = "https://jsonplaceholder.typicode.com/post";
 
 export default {
@@ -84,7 +84,7 @@ export default {
 		validate() {
 			this.$refs.form.validate();
 
-			let json_data = {
+			const json_data = {
 				name: this.name,
 				title: this.title,
 				text: this.text,
@@ -94,7 +94,7 @@ export default {
 				.post(url, json_data)
 				.then(function (response) {
 					console.log(response);
-					// alert('전송에 성공하였습니다')
+					alert("전송에 성공하였습니다");
 				})
 				.catch(function (error) {
 					alert("전송에 실패하였습니다. ");

@@ -1,22 +1,30 @@
+require("dotenv").config();
+// DEPENDENCIES
+const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
-const connect = require('./schemas')
-// const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
 
 const app = express();
+const port = process.env.PORT || 4500;
 
+// Static File Service
+app.use(express.static("public"));
+// Body-parser
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.post("/write", (req, res) => {
-	console.log("data input");
-	console.log(req.body);
-	console.log(req.body.name);
-	res.send("receive");
-});
+// Node의 native Promise 사용
+// mongoose.Promise = global.Promise;
 
-app.listen(8000, () => {
-	console.log("run server");
-});
+// Connect to MongoDB
+mongoose
+	.connect(process.env.MONGO_URI)
+	.then(() => console.log("Successfully connected to mongodb"))
+	.catch((e) => console.error(e));
+
+// ROUTERS
+app.use("/", require("./routes/todos"));
+
+app.listen(port, () => console.log(`Server listening on port ${port}`));
