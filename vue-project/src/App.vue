@@ -4,6 +4,7 @@
 			<full-page :options="options" id="fullpage" ref="fullpage">
 				<div class="section">
 					<h3>Section 1</h3>
+					<img :src="img" />
 				</div>
 				<div class="section">
 					<v-form v-model="valid" ref="form">
@@ -90,6 +91,10 @@ export default {
 	// 	},
 	// };
 	data: () => ({
+		// imgSrc:
+		// 	// "https://w.namu.la/s/6f514e81b9f8a4c01d063caa8bbb6f8ced338474f564f35e7cb6174d8d48b469ac109c0af5d390daa90722d52d9b7d2f33a4910333770f238dea5e8584236ba4089db86c0f7d7bb1d755d8c6dece18bdb8dfbbb8ca9315488ff5de4a17e1d54faf8669ebc63d298748a3c245b7c53f29",
+		// 	"@assets/img.jpeg",
+		img: require("./assets/img.jpeg"),
 		valid: false,
 		name: "",
 		title: "",
