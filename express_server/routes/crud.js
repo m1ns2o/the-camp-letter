@@ -23,10 +23,10 @@ router.get("/mailid/:mailid", (req, res) => {
 
 // Create new mail document
 router.post("/", (req, res) => {
-	// console.log(req.body);
-	// console.log(req.body.name);
-	// console.log(req.body.title);
-	// console.log(req.body.text);
+	console.log(req.body);
+	console.log(req.body.name);
+	console.log(req.body.title);
+	console.log(req.body.text);
 	Mail.create(req.body)
 		.then((mail) => res.send(mail))
 		.catch((err) => res.status(500).send(err));
