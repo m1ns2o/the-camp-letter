@@ -1,4 +1,4 @@
-# NEM-TYPESCRIPT
+# the-camp-letter
 - Node.js + Express + MongoDB + Typescript 를 사용하여 서버 탬플릿을 제작했습니다.
 ## npm
 - ```npm test``` 테스트 케이스 실행
