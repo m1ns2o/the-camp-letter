@@ -20,7 +20,7 @@
 						<img :src="arrow" id="arrow" />
 					</div>
 				</div>
-				<div class="section">
+				<div class="section" id="page2">
 					<v-form v-model="valid" ref="form">
 						<v-container>
 							<v-row>
@@ -62,7 +62,7 @@
 										auto-grow="true"
 										name="input-7-1"
 										label="내용"
-										rows="12"
+										rows="15"
 									></v-textarea>
 									<v-btn
 										:disabled="!valid"
@@ -250,27 +250,41 @@ a {
 } */
 button {
 	width: 100%;
+	margin-bottom: 20px;
 	/* margin-right: auto;
 	margin-left: auto; */
 }
 
 .section {
 	/* height: 99%; */
-	width: 100%;
 	max-width: 900px;
 	margin-right: auto;
 	margin-left: auto;
-	/* display: flex; */
+	display: flex;
+	padding-top: 0;
 	/* justify-content: flex-start; */
 	/* margin-top: 0;
 	margin-bottom: 1%; */
+}
+
+form {
+	margin-top: 0;
 }
 
 #page1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* justify-content: space-around; */
+	margin-top: 50px;
+	justify-content: flex-start;
+}
+
+#page2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	justify-content: flex-start;
 }
 
 .text {
