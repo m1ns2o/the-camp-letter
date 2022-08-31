@@ -62,7 +62,7 @@
 										auto-grow="true"
 										name="input-7-1"
 										label="내용"
-										rows="15"
+										rows="10"
 									></v-textarea>
 									<v-btn
 										:disabled="!valid"
@@ -127,15 +127,15 @@ export default {
 			(v) => !!v || "내용을 작성해주세요.",
 			(v) => v.length <= 1500 || "내용은 1490자 이하여야합니다. ",
 		],
-		options: {
-			licenseKey: "YOUR_KEY_HERE",
-			// afterLoad: this.afterLoad,
-			scrollOverflow: true,
-			scrollBar: false,
-			// menu: "#menu",
-			navigation: false,
-			// anchors: ["page1", "page3"],
-		},
+		// options: {
+		// 	licenseKey: "YOUR_KEY_HERE",
+		// 	// afterLoad: this.afterLoad,
+		// 	scrollOverflow: true,
+		// 	scrollBar: false,
+		// 	// menu: "#menu",
+		// 	navigation: false,
+		// 	// anchors: ["page1", "page3"],
+		// },
 	}),
 	methods: {
 		validate() {
@@ -256,7 +256,7 @@ button {
 }
 
 .section {
-	height: 99%;
+	/* height: 99%; */
 	max-width: 900px;
 	margin-right: auto;
 	margin-left: auto;
@@ -312,7 +312,7 @@ form {
 	margin-bottom: 10%;
 }
 #arrow {
-	width: 50px;
+	width: 40px;
 }
 
 /* @media screen and (min-width: 768px), (orientation: landscape) {
