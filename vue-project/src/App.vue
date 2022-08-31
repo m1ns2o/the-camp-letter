@@ -269,17 +269,18 @@ button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
+	/* justify-content: space-around; */
 }
 
 .text {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 20px;
 }
 
 .img {
+	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -293,7 +294,7 @@ button {
 	/* border: 4px solid #bcbcbc; */
 	/* border: 10px solid blue; */
 	border-radius: 10px;
-	margin-bottom: 10%;
+	/* margin-bottom: 0%; */
 }
 #arrow {
 	width: 50px;
