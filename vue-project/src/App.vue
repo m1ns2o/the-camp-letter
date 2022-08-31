@@ -6,7 +6,7 @@
 					<div class="text">
 						<h1>인편 보내기</h1>
 						<div class="info">
-							<h3>※ 본 서비스는 더캠프의 공식 서비스가 아닙니다 ※</h3>
+							<h3>※ 더캠프의 공식서비스가 아닙니다 ※</h3>
 							<!-- <h3>Section 1</h3> -->
 						</div>
 						<div class="soldier">
@@ -62,7 +62,7 @@
 										auto-grow="true"
 										name="input-7-1"
 										label="내용"
-										rows="20"
+										rows="12"
 									></v-textarea>
 									<v-btn
 										:disabled="!valid"

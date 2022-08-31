@@ -1,6 +1,6 @@
 require("dotenv").config();
 // DEPENDENCIES;
-const cors = require("cors");
+// const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -10,7 +10,7 @@ const app = express();
 
 // Static File Service
 app.use(express.static("public"));
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -30,6 +30,6 @@ app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
-app.listen(8000, () => {
+app.listen(8080, () => {
 	console.log("run server");
 });
