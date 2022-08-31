@@ -4,6 +4,7 @@ const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const app = express();
 
@@ -24,6 +25,10 @@ mongoose
 
 // ROUTERS
 app.use("/", require("./routes/crud"));
+
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "/public/index.html"));
+});
 
 app.listen(8000, () => {
 	console.log("run server");

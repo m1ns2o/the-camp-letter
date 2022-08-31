@@ -28,9 +28,9 @@ async function main(name, title, text) {
 		unitName,
 		thecamp.SoldierRelationship.FRIEND
 	);
-	// console.log(soldier);
-	// console.log(title + "  이름 : " + name);
-	// console.log(text);
+	console.log(soldier);
+	console.log(title + "  이름 : " + name);
+	console.log(text);
 
 	const client = new thecamp.Client();
 
@@ -44,7 +44,7 @@ async function main(name, title, text) {
 }
 
 // Find All
-router.get("/", (req, res) => {
+router.get("/mail", (req, res) => {
 	Mail.findAll()
 		.then((mails) => {
 			if (!mails.length) return res.status(404).send({ err: "Mail not found" });
@@ -54,7 +54,7 @@ router.get("/", (req, res) => {
 });
 
 // Find One by mailid
-router.get("/mailid/:mailid", (req, res) => {
+router.get("/mail/:mailid", (req, res) => {
 	Mail.findOneByMailid(req.params.mailid)
 		.then((mail) => {
 			if (!mail) return res.status(404).send({ err: "Mail not found" });
@@ -64,27 +64,27 @@ router.get("/mailid/:mailid", (req, res) => {
 });
 
 // Create new mail document
-router.post("/", (req, res) => {
+router.post("/mail", (req, res) => {
 	Mail.create(req.body)
 		.then((mail) => res.send(mail))
 		.catch((err) => res.status(500).send(err));
 
 	try {
-		main(req.body.name,req.body.title,req.body.text);
+		main(req.body.name, req.body.title, req.body.text);
 	} catch (error) {
 		console.log(error);
 	}
 });
 
 // Update by mailid
-router.put("/mailid/:mailid", (req, res) => {
+router.put("/mail/:mailid", (req, res) => {
 	Mail.updateByMailid(req.params.mailid, req.body)
 		.then((mail) => res.send(mail))
 		.catch((err) => res.status(500).send(err));
 });
 
 // Delete by mailid
-router.delete("/mailid/:mailid", (req, res) => {
+router.delete("/mail/:mailid", (req, res) => {
 	Mail.deleteByMailid(req.params.mailid)
 		.then(() => res.sendStatus(200))
 		.catch((err) => res.status(500).send(err));
