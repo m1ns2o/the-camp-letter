@@ -2,9 +2,23 @@
 	<v-app>
 		<div id="app">
 			<full-page :options="options" id="fullpage" ref="fullpage">
-				<div class="section">
-					<h3>Section 1</h3>
-					<img :src="img" />
+				<div class="section" id="page1">
+					<div class="text">
+						<h1>인편 보내기</h1>
+						<div class="info">
+							<h3>※본 서비스는 </h3>
+							<h3>Section 1</h3>
+						</div>
+						<div class="soldier">
+							<h5>생년월일 : 2002 01 28</h5>
+							<h5>입대일 : 2022 09 20</h5>
+							<h5>입영부대 : 55사단 신병교육대</h5>
+						</div>
+					</div>
+					<div class="img">
+						<img :src="img" id="img" />
+						<img :src="arrow" id="arrow" />
+					</div>
 				</div>
 				<div class="section">
 					<v-form v-model="valid" ref="form">
@@ -95,6 +109,7 @@ export default {
 		// 	// "https://w.namu.la/s/6f514e81b9f8a4c01d063caa8bbb6f8ced338474f564f35e7cb6174d8d48b469ac109c0af5d390daa90722d52d9b7d2f33a4910333770f238dea5e8584236ba4089db86c0f7d7bb1d755d8c6dece18bdb8dfbbb8ca9315488ff5de4a17e1d54faf8669ebc63d298748a3c245b7c53f29",
 		// 	"@assets/img.jpeg",
 		img: require("./assets/img.jpeg"),
+		arrow: require("./assets/arrow.svg"),
 		valid: false,
 		name: "",
 		title: "",
@@ -213,7 +228,7 @@ export default {
 </script>
 
 <style>
-ul {
+/* ul {
 	list-style-type: none;
 	padding: 0;
 }
@@ -224,7 +239,7 @@ li {
 a {
 	color: #42b983;
 	display: none;
-}
+} */
 .fp-watermark {
 	display: none;
 }
@@ -244,8 +259,43 @@ button {
 	max-width: 900px;
 	margin-right: auto;
 	margin-left: auto;
+
 	/* margin-top: 0;
 	margin-bottom: 1%; */
+}
+
+#page1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.text {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.img {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: space-around; */
+}
+
+#img {
+	/* display: inline-block; */
+	width: 80%;
+	max-width: 500px;
+	/* border: 4px solid #bcbcbc; */
+	/* border: 10px solid blue; */
+	border-radius: 10px;
+	margin-bottom: 10%;
+}
+#arrow {
+	width: 50px;
 }
 
 @media screen and (min-width: 768px), (orientation: landscape) {
