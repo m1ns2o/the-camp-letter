@@ -127,15 +127,15 @@ export default {
 			(v) => !!v || "내용을 작성해주세요.",
 			(v) => v.length <= 1500 || "내용은 1490자 이하여야합니다. ",
 		],
-		// options: {
-		// 	licenseKey: "YOUR_KEY_HERE",
-		// 	afterLoad: this.afterLoad,
-		// 	scrollOverflow: true,
-		// 	scrollBar: false,
-		// 	menu: "#menu",
-		// 	navigation: true,
-		// 	anchors: ["page1", "page2", "page3"],
-		// },
+		options: {
+			licenseKey: "YOUR_KEY_HERE",
+			// afterLoad: this.afterLoad,
+			scrollOverflow: false,
+			scrollBar: false,
+			menu: "#menu",
+			navigation: true,
+			anchors: ["page1", "page2", "page3"],
+		},
 	}),
 	methods: {
 		validate() {
