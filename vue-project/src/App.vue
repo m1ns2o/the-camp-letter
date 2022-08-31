@@ -6,8 +6,8 @@
 					<div class="text">
 						<h1>인편 보내기</h1>
 						<div class="info">
-							<h3>※본 서비스는 </h3>
-							<h3>Section 1</h3>
+							<h3>※ 본 서비스는 더캠프의 공식 서비스가 아닙니다 ※</h3>
+							<!-- <h3>Section 1</h3> -->
 						</div>
 						<div class="soldier">
 							<h5>생년월일 : 2002 01 28</h5>
@@ -38,7 +38,7 @@
 									<v-text-field
 										v-model="title"
 										:rules="titleRules"
-										:counter="100"
+										:counter="50"
 										label="제목"
 										required
 									></v-text-field>
@@ -58,7 +58,7 @@
 									<v-textarea
 										v-model="text"
 										:rules="textRules"
-										:counter="1490"
+										:counter="1500"
 										auto-grow="true"
 										name="input-7-1"
 										label="내용"
@@ -120,11 +120,11 @@ export default {
 		],
 		titleRules: [
 			(v) => !!v || "제목을 작성해주세요.",
-			(v) => v.length <= 100 || "제목은 100자 이하여야 합니다.",
+			(v) => v.length <= 50 || "제목은 50자 이하여야 합니다.",
 		],
 		textRules: [
 			(v) => !!v || "내용을 작성해주세요.",
-			(v) => v.length <= 1490 || "내용은 1490자 이하여야합니다. ",
+			(v) => v.length <= 1500 || "내용은 1490자 이하여야합니다. ",
 		],
 		// options: {
 		// 	licenseKey: "YOUR_KEY_HERE",

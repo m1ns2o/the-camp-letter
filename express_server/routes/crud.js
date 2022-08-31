@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { text } = require("express");
 const thecamp = require("the-camp-lib");
 const Mail = require("../models/mail");
 
@@ -27,7 +28,9 @@ async function main(name, title, text) {
 		unitName,
 		thecamp.SoldierRelationship.FRIEND
 	);
-	console.log(soldier);
+	// console.log(soldier);
+	// console.log(title + "  이름 : " + name);
+	// console.log(text);
 
 	const client = new thecamp.Client();
 
@@ -67,11 +70,10 @@ router.post("/", (req, res) => {
 		.catch((err) => res.status(500).send(err));
 
 	try {
-		main();
+		main(req.body.name,req.body.title,req.body.text);
 	} catch (error) {
 		console.log(error);
 	}
-
 });
 
 // Update by mailid
