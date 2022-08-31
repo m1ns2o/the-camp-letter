@@ -294,7 +294,7 @@ button {
 	/* border: 4px solid #bcbcbc; */
 	/* border: 10px solid blue; */
 	border-radius: 10px;
-	/* margin-bottom: 0%; */
+	margin-bottom: 10%;
 }
 #arrow {
 	width: 50px;
