@@ -20,6 +20,9 @@ module.exports = defineConfig({
 	// }
 });
 
+// module.exports = {
+// 	outputDir: "../express_server/public", // 빌드할 폴더 경로
+// };
 
 // module.exports = {
 //   devServer:{

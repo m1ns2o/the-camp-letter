@@ -260,7 +260,8 @@ button {
 	max-width: 900px;
 	margin-right: auto;
 	margin-left: auto;
-
+	/* display: flex; */
+	/* justify-content: flex-start; */
 	/* margin-top: 0;
 	margin-bottom: 1%; */
 }
@@ -276,7 +277,7 @@ button {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 40px;
 }
 
 .img {
@@ -284,7 +285,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* justify-content: space-around; */
+	justify-content: space-around;
 }
 
 #img {
