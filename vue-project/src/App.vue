@@ -130,11 +130,11 @@ export default {
 		options: {
 			licenseKey: "YOUR_KEY_HERE",
 			// afterLoad: this.afterLoad,
-			scrollOverflow: false,
+			scrollOverflow: true,
 			scrollBar: false,
-			menu: "#menu",
-			navigation: true,
-			anchors: ["page1", "page2", "page3"],
+			// menu: "#menu",
+			navigation: false,
+			// anchors: ["page1", "page3"],
 		},
 	}),
 	methods: {
@@ -256,7 +256,7 @@ button {
 }
 
 .section {
-	/* height: 99%; */
+	height: 99%;
 	max-width: 900px;
 	margin-right: auto;
 	margin-left: auto;
@@ -281,9 +281,9 @@ form {
 
 #page2 {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 50px;
+	/* flex-direction: column;
+	/* align-items: center; */
+	/* margin-top: 20px; */
 	justify-content: flex-start;
 }
 
@@ -315,10 +315,10 @@ form {
 	width: 50px;
 }
 
-@media screen and (min-width: 768px), (orientation: landscape) {
+/* @media screen and (min-width: 768px), (orientation: landscape) {
 	.section {
 		border-radius: 1%;
 		box-shadow: 0px 2px 10px #d0d3d9;
 	}
-}
+} */
 </style>
