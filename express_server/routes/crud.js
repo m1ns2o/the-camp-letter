@@ -4,7 +4,7 @@ const thecamp = require("the-camp-lib");
 const Mail = require("../models/mail");
 
 const id = process.env.ID;
-const password = process.env.PWD;
+const password = process.env.PW;
 
 const myname = process.env.NAME;
 const birth = process.env.BIRTH;
