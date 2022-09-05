@@ -14,7 +14,7 @@
 DB_URL=mongodb://localhost/YOUR_MONGODB_URL
 ID = 더캠프 아이디
 PW = 더캠프 비밀번호
-NAME = 정민서
+NAME = 이름
 BIRTH = 생년월일
 ENTERDATE = 입대일
 CLASSNAME = 예비군인/훈련병 //신분
