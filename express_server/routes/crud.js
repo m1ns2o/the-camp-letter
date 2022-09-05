@@ -28,9 +28,9 @@ async function main(name, title, text) {
 		unitName,
 		thecamp.SoldierRelationship.FRIEND
 	);
-	console.log(soldier);
-	console.log(title + "  이름 : " + name);
-	console.log(text);
+	// console.log(soldier);
+	// console.log(title + "  이름 : " + name);
+	// console.log(text);
 
 	const client = new thecamp.Client();
 
