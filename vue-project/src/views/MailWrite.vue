@@ -91,8 +91,8 @@
 
 import axios from "axios";
 
-const url = "http://192.168.0.17:4000/mail";
-// const url = "/mail";
+// const url = "http://192.168.0.17:4000/mail";
+const url = "/mail";
 export default {
 	// data() {
 	// return {

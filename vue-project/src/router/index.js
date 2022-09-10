@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import MailView from "../views/MailView";
 import MailWrite from "../views/MailWrite";
-import MailText from "../views/MailText";
+// import MailText from "../views/MailText";
 // import MailTest from "../views/TestView";
 // import MailWrite from "../views/MailWrite.vue";
 
@@ -16,11 +16,11 @@ const routes = [
 		name: "write",
 		component: MailWrite,
 	},
-	{
-		path: "/text/:id",
-		name: "text",
-		component: MailText,
-	},
+	// {
+	// 	path: "/text/:id",
+	// 	name: "text",
+	// 	component: MailText,
+	// },
 	// {
 	// 	path: "/test",
 	// 	name: "test",

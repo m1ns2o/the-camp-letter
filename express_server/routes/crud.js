@@ -48,7 +48,8 @@ router.get("/mail", (req, res) => {
 	Mail.findAll()
 		.then((mails) => {
 			if (!mails.length) return res.status(404).send({ err: "Mail not found" });
-			res.send(`find successfully: ${mails}`);
+			// res.send(`find successfully: ${mails}`);
+			res.send(mails);
 		})
 		.catch((err) => res.status(500).send(err));
 });
@@ -58,7 +59,8 @@ router.get("/mail/:mailid", (req, res) => {
 	Mail.findOneByMailid(req.params.mailid)
 		.then((mail) => {
 			if (!mail) return res.status(404).send({ err: "Mail not found" });
-			res.send(`findOne successfully: ${mail}`);
+			// res.send(`findOne successfully: ${mail}`);
+			res.send(mail);
 		})
 		.catch((err) => res.status(500).send(err));
 });

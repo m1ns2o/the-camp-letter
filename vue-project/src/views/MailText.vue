@@ -6,7 +6,7 @@
 
 <script>
 import axios from "axios";
-const url = "http://localhost:4000/mail/";
+const url = "/mail";
 // let mails = this.mails;
 export default {
 	data: () => ({
