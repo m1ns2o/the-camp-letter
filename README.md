@@ -12,7 +12,7 @@ http://www.m1ns2o.kro.kr/
 - ```npm run serve``` vue.js front 실행 -->
 
 - `npm install` npm 패키지 설치
-- `pm2 start app.js` express 서버 실행
+- `pm2 -i max start app.js` express 서버 실행
 
 ## .env
 
