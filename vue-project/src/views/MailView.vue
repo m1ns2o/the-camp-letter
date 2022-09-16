@@ -11,10 +11,10 @@
 				<tr v-for="mail in mails" :key="mail._id">
 					<td>
 						<!-- <router-link :to="'/text/' + mail._id"> -->
-							{{ mail.title }}
-							<!-- </router-link> -->
+						{{ mail.title }}
+						<!-- </router-link> -->
 					</td>
-					<td>{{ mail.name }}</td>
+					<td>{{ mail.name[0] + "*" + mail.name.slice(2) }}</td>
 				</tr>
 			</tbody>
 		</v-table>
@@ -23,7 +23,7 @@
 
 <script>
 import axios from "axios";
-// const url = "http://localhost:4000/mail";
+// const url = "http://localhost:8000/mail";
 const url = "/mail";
 // let mails = this.mails;
 export default {
