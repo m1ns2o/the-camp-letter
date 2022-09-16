@@ -36,7 +36,7 @@ export default {
 		axios
 			.get(url)
 			.then((response) => {
-				console.log(response.data);
+				// console.log(response.data);
 				this.mails = response.data;
 			})
 			.catch((error) => {
