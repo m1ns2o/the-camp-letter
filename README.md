@@ -27,3 +27,5 @@ CLASSNAME = 예비군인/훈련병 //신분
 GROUPNAME = 육군 //군종
 UNITNAME = 입영부대
 ```
+
+https://github.com/m1ns2o/the-camp-lib
